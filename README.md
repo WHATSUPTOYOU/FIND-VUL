@@ -15,8 +15,11 @@ If this project is still in use, please check it and fix this bug as soon as pos
 * Child module problem
 * Bug Report Revision
 * Another little problem  
-  * Using MD5 as a condition to match target method could still have some problems  
-  * For example,there's a target file in **undertow-servlet-2.0.21.Final**  
+  * Using MD5 as a condition to match target method could still have some problems:  
+  * For example,there's a target file in **undertow-servlet-2.0.21.Final** with two following parts:  
+  ![image text](https://github.com/WHATSUPTOYOU/FIND-VUL/blob/main/Picture2.png)
+  ![image text](https://github.com/WHATSUPTOYOU/FIND-VUL/blob/main/Picture3.png)
+  Two pictures have the same content in line 80 and 126, so they have the same MD5 value. This could affect the accuracy of method positioning.  
   
 * ## Vulnerable Projects  
 {"jar": "jooby-1.5.1.jar", "vul_project": ["zilvis97/your-bank-starter"](https://github.com/zilvis97/your-bank-starter), "file": "Jooby", "method": "get", "params": "String path,Route.Handler handler"}  
